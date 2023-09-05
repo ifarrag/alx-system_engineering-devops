@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | head
+find . -maxdepth 0 -type f -print | ls -t | sort | head
