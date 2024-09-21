@@ -4,19 +4,18 @@
 h="0"
 m="60"
 
-while true 
+while true
 do
-  if [ "$m" -eq 60 ]; then
-    echo "Hour: $h"
-    let "m=1"
-    ((h++))
+  if [ "$h" -eq 13 -a "$m" -eq 60 ]; then
+    break
   fi
 
-  if [ "$h" -eq 13 ]; then
-    break
+  if [ "$m" -eq 60 ]; then
+    echo "Hour: $h"
+    ((h++))
+    ((m=1))
   fi
 
   echo "$m"
   ((m++))
-
 done
