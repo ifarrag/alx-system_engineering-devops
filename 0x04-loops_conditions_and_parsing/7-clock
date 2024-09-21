@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Diplay 12 hours
+
+h="0"
+m="60"
+
+while true 
+do
+  if [ "$m" -eq 60 ]; then
+    echo "Hour: $h"
+    let "m=1"
+    ((h++))
+  fi
+
+  if [ "$h" -eq 13 ]; then
+    break
+  fi
+
+  echo "$m"
+  ((m++))
+
+done
