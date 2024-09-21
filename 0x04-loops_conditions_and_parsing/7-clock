@@ -6,7 +6,8 @@ m="60"
 
 while true
 do
-  if [ "$h" -eq 13 -a "$m" -eq 60 ]; then
+  if [ "$h" -eq 13 ] && [ "$m" -eq 60 ]
+  then
     break
   fi
 
