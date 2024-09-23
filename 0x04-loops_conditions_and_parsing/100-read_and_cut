@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#redirect file to the loop input
+
+while IFS= read -r line; do
+ echo "$line" | cut -s -f1,3,6 -d ':'
+done < /etc/passwd
