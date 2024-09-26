@@ -5,7 +5,7 @@
 { if (IP=="") {IP=$1;CODE=$2} }
 { if (IP==$1 && CODE==$2) {(++SUM)}
   else
-    {print SUM,IP,$2
+    {print SUM,IP,CODE
     IP=$1
     CODE=$2
     SUM=1}
