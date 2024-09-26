@@ -9,4 +9,4 @@
     IP=$1
     CODE=$2
     SUM=1}
-}' | sort -r -n
+}' | sort -r -nk1 -t ' '
