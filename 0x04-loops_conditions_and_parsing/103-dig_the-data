@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SUCH AWK
 
-./102-lets_parse_apache_logs | sort | awk 'BEGIN {SUM="0";IP="";CODE=""} 
+./102-lets_parse_apache_logs | sort -n | awk 'BEGIN {SUM="0";IP="";CODE=""} 
 { if (IP=="") {IP=$1;CODE=$2} }
 { if (IP==$1 && CODE==$2) {(++SUM)}
   else
